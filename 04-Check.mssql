@@ -1,0 +1,20 @@
+-- CHECK CONSTRAINT
+
+CREATE TABLE employees (
+    employee_id char(3),
+    employee_name varchar(30) NOT NULL,
+    age int CHECK (age >= 18)
+);
+
+INSERT INTO employees VALUES ('001', 'Jack London', 15); -- X 
+INSERT INTO employees VALUES ('001', 'Jack London', 19); -- V
+
+SELECT * FROM employees
+
+CREATE TABLE persons
+(
+id varchar(5) PRIMARY KEY,
+name varchar(30) UNIQUE,
+salary int CHECK (salary>10000),
+date date    
+);
