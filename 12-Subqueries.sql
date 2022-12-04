@@ -42,3 +42,17 @@ SELECT isim, maas, isyeri FROM calisanlar2 WHERE isyeri IN (SELECT marka_isim FR
 SELECT isim,maas,sehir FROM calisanlar2 
 WHERE isyeri IN (SELECT marka_isim FROM markalar WHERE marka_id>101);
 
+
+-- Query names of brands with more than 15,000, with employees names and salaries 
+
+Select isim, maas, isyeri From calisanlar2 Where isyeri IN (Select marka_isim From markalar where calisan_sayisi > 15000);
+
+
+-- Query the names, salaries and cities of brand employees whose brand_id is greater than 101.
+
+Select isim,maas,sehir FROM calisanlar2 where isyeri IN (Select marka_isim from markalar where marka_id > 101);
+
+
+-- List the brand IDs and the number of employees of the brands that have employees in Ankara.
+
+Select marka_isim, marka_id, calisan_sayisi from markalar where marka_isim In (Select isyeri from calisanlar2 where sehir = 'Ankara');
