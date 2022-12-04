@@ -1,0 +1,21 @@
+-- DML -- DELETE
+
+-- Delete all data in a table
+
+DELETE FROM employees 
+
+-- Delete specific record in a table
+
+DELETE FROM students WHERE student_name = 'Angel';
+
+DELETE FROM students WHERE grade_average < 70;
+
+SELECT * FROM students
+
+
+
+
+
+
+
+
