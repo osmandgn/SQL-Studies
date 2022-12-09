@@ -30,3 +30,6 @@ SELECT * FROM kelimeler WHERE kelime ~* '^[as]'
 
 -- SORU	: m veya f ile biten kelimelerin tum bilgilerini yazdiran QUERY yazin
 SELECT * FROM kelimeler WHERE kelime ~* '[mf]$'
+
+-- E ile baslayip y ile bitenlerin kelimelerin disindaki kelimeleri sorgulama 
+Select name From employee Where name ~ '^[^E](.*)[^y]$';
